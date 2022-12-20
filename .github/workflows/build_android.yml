@@ -76,10 +76,7 @@ jobs:
       fail-fast: false
       matrix:
         targetPlatform:
-          - StandaloneLinux64
-          - iOS
           - Android
-          - WebGL
     steps:
       - uses: actions/checkout@v3
         with:
