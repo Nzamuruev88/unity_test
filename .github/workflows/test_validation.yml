@@ -66,7 +66,7 @@ jobs:
         with:
           projectPath: ${{ env.PROJECT_PATH }}
           targetPlatform: ${{ matrix.targetPlatform }}
-          buildMethod: GGS.Story.Build.Validation.ValidateCommandLine
+          buildMethod: GGS.Story.Build.Validation.TestDoSomethingInUnityScript.ValidateCommandLine
       - uses: actions/upload-artifact@v3
         with:
           name: Build-${{ matrix.targetPlatform }}
