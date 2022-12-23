@@ -39,10 +39,10 @@ jobs:
           name: ${{ steps.getManualLicenseFile.outputs.filePath }}
           path: ${{ steps.getManualLicenseFile.outputs.filePath }}
 
-  validate:
+  validation:
     needs: [checklicense]
     if: needs.checklicense.outputs.is_unity_license_set == 'true'
-    name: Build for ${{ matrix.targetPlatform }}
+    name: Validation for ${{ matrix.targetPlatform }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
